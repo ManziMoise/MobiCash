@@ -4,8 +4,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Display;
+import android.view.View;
+import android.widget.Button;
 
 import java.util.ArrayList;
 
@@ -13,6 +16,7 @@ public class HomeActivity extends AppCompatActivity {
 
     RecyclerView recyclerView;
     MyAdapter myAdapter;
+    Button btn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +27,16 @@ public class HomeActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         myAdapter = new MyAdapter(this, getMyList());
         recyclerView.setAdapter(myAdapter);
+        btn = (Button) findViewById(R.id.nextPage);
+
+
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                nextPage();
+            }
+        });
+
     }
 
     private ArrayList<Model> getMyList(){
@@ -41,6 +55,14 @@ public class HomeActivity extends AppCompatActivity {
 
 
         return models;
+    }
+
+
+    public void nextPage(){
+
+        Intent intent = new Intent(HomeActivity.this,ShowUsersActivity.class);
+        startActivity(intent);
+
     }
 
 

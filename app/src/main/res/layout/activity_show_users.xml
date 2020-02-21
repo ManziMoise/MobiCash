@@ -12,7 +12,8 @@
         android:text="Click here to view the users"
         android:id="@+id/showUsersbtn"
         android:layout_marginTop="10dp"
-        android:layout_marginLeft="10dp"/>
+        android:layout_marginLeft="10dp"
+        android:onClick="showUsers"/>
     
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"

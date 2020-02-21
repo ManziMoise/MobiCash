@@ -14,6 +14,5 @@ public class MyViewHolder extends RecyclerView.ViewHolder {
         super(itemView);
         this.nnames = itemView.findViewById(R.id.names);
         this.ppasswords = itemView.findViewById(R.id.passwords);
-
     }
 }

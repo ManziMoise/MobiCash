@@ -1,11 +1,14 @@
 package com.example.mobicash;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 
 import java.util.ArrayList;
@@ -13,8 +16,12 @@ import java.util.ArrayList;
 public class ShowUsersActivity extends AppCompatActivity {
 
     RecyclerView recyclerView ;
+    Button showbtn;
+
 
     ArrayList<UserModel> userModelsArrayList;
+
+    DBRecycleviewAdapter dbRecycleviewAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,17 +30,25 @@ public class ShowUsersActivity extends AppCompatActivity {
 
         recyclerView = (RecyclerView) findViewById(R.id.dataRV);
         userModelsArrayList = new ArrayList<>();
+        showbtn = (Button) findViewById(R.id.showUsersbtn);
+
+        showbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showUsers();
+            }
+        });
 
     }
 
-    public void showUsers(View view)
+    public void showUsers()
     {
         try {
             DatabaseHelper helper = new DatabaseHelper (this);
             SQLiteDatabase sqLiteDatabase= helper.getReadableDatabase();
             if (sqLiteDatabase!=null)
             {
-                Cursor cursor = sqLiteDatabase.rawQuery("select *  from registeruser", null);
+                Cursor cursor = sqLiteDatabase.rawQuery("select * from registeruser", null);
 
                 if (cursor.getCount()==0)
                 {
@@ -48,6 +63,12 @@ public class ShowUsersActivity extends AppCompatActivity {
                             cursor.getString(2)
                                 ));
                     }
+
+                    dbRecycleviewAdapter = new DBRecycleviewAdapter(userModelsArrayList);
+                    recyclerView.hasFixedSize();
+                    recyclerView.setLayoutManager(new LinearLayoutManager(this));
+                    recyclerView.setAdapter(dbRecycleviewAdapter);
+
                 }
             }
             else

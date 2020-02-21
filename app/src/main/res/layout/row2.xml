@@ -1,12 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    app:cardCornerRadius="3dp"
-    app:cardElevation="3dp"
-    app:cardUseCompatPadding="true"
-    >
+    android:layout_height="match_parent">
+
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -18,7 +14,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Name"
-        android:id="@+id/names"
+        android:id="@+id/namess"
         android:textSize="22sp"
         android:textColor="#000"
         android:textStyle="bold"
@@ -29,7 +25,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/passwords"
+        android:id="@+id/passwordss"
         android:text="Passwords"
         android:textSize="18sp"
         android:textColor="#a9a9a9"
@@ -42,4 +38,4 @@
 
         />
 
-</androidx.cardview.widget.CardView>
+</RelativeLayout>
