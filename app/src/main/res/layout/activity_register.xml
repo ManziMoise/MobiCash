@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegisterActivity"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:background="@drawable/takeoff">
+
+    <EditText
+        android:id="@+id/usernameET"
+        android:layout_width="190dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="130dp"
+        android:textColor="#090606"
+        android:background="#5EFFFFFF"
+        android:hint="@string/Username"/>
+    <EditText
+        android:id="@+id/passwordET"
+        android:layout_width="190dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:textColor="#090606"
+        android:background="#5EFFFFFF"
+        android:hint="@string/Password"/>
+    <EditText
+        android:id="@+id/conf_passwordET"
+        android:layout_width="190dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:textColor="#090606"
+        android:background="#5EFFFFFF"
+        android:hint="@string/Conf_password"/>
+    <Button
+        android:id="@+id/registerBTN"
+        android:layout_width="190dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:background="#B05864B9"
+
+        android:text="Register"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:text="@string/Already_Registered"/>
+        <TextView
+
+            android:id="@+id/loginTV"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:paddingLeft="10dp"
+            android:textStyle="bold"
+            android:textColor="#1C3253"
+            android:textSize="16sp"
+            android:text="@string/Login"/>
+
+
+
+
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

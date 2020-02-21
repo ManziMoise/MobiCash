@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">MOBIcash</string>
+    <string name="Username">Username</string>
+    <string name="Password">Password</string>
+    <string name="Not_Registered">Not Registered?</string>
+    <string name="Register">Register</string>
+    <string name="Conf_password">Confirm password</string>
+    <string name="Already_Registered">Already Registered?</string>
+    <string name="Login">Login</string>
+    <string name="Welcome_user">Welcome user</string>
+</resources>

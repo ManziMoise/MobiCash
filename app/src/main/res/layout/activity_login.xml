@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:background="@drawable/takeoff">
+
+
+
+    <EditText
+        android:id="@+id/usernameET"
+        android:layout_width="190dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="200dp"
+        android:hint="@string/Username"
+        android:textColor="#090606"
+        android:background="#5EFFFFFF"/>
+    <EditText
+        android:id="@+id/passwordET"
+        android:layout_width="190dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:hint="@string/Password"
+        android:textColor="#090606"
+        android:background="#5CFFFFFF"/>
+    <Button
+        android:id="@+id/loginBTN"
+        android:layout_width="190dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:background="#B05864B9"
+
+        android:text="Login"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:text="@string/Not_Registered"/>
+        <TextView
+            android:id="@+id/registerTV"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:paddingLeft="10dp"
+            android:textStyle="bold"
+            android:textColor="#1C3253"
+            android:text="@string/Register"/>
+
+
+
+
+
+    </LinearLayout>
+
+
+
+
+
+</LinearLayout>
